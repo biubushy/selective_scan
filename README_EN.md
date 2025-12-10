@@ -10,6 +10,12 @@ Selective Scan CUDA operator extracted from [Mamba](https://github.com/state-spa
 
 **Core Work of This Project:** Extract the CUDA core code of the Selective Scan algorithm from [Tri Dao](https://github.com/tridao)'s [Mamba original implementation](https://github.com/state-spaces/mamba), repackage it as an independently installable Python dependency for easy use in other projects.
 
+**Extraction Version Information:**
+- Source Repository: [state-spaces/mamba](https://github.com/state-spaces/mamba)
+- Extracted from commit: [`d49d7c9`](https://github.com/state-spaces/mamba/commit/d49d7c909b5a9d151b3f4e7e8477e7d20f156860)
+- Extraction Date: 2024-08-30
+- Original Version: Mamba v2.2.6
+
 **Technical Description:** Selective Scan is the core operator of the Mamba architecture, transforming traditional O(n) serial recursion into O(log n) parallelizable operations through parallel scan techniques. The original implementation is deeply integrated into the Mamba project. This project extracts it as an independent module while maintaining the original high-performance CUDA implementation.
 
 **Extraction and Packaging Features:**
@@ -478,6 +484,8 @@ Issues and Pull Requests are welcome!
 
 - **v0.1.0** (2025-10) - Initial extraction version
   - Extracted Selective Scan core code from Mamba repository
+    - Source commit: `d49d7c909b5a9d151b3f4e7e8477e7d20f156860` (2024-08-30)
+    - Corresponds to Mamba v2.2.6
   - Reorganized into standalone Python package structure
   - Preserved all original features: forward/backward pass, multi-precision, real/complex support
   - Added standard setup.py and __init__.py interfaces

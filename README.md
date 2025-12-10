@@ -10,6 +10,12 @@
 
 **本项目的核心工作：** 从[Tri Dao](https://github.com/tridao)的[Mamba原始实现](https://github.com/state-spaces/mamba)中提取Selective Scan算法的CUDA核心代码，重新封装为可独立安装的Python依赖包，方便在其他项目中直接使用。
 
+**提取版本信息：**
+- 源仓库：[state-spaces/mamba](https://github.com/state-spaces/mamba)
+- 提取自commit：[`d49d7c9`](https://github.com/state-spaces/mamba/commit/d49d7c909b5a9d151b3f4e7e8477e7d20f156860)
+- 提取日期：2024-08-30
+- 原始版本：Mamba v2.2.6
+
 **技术说明：** Selective Scan是Mamba架构的核心算子，通过并行扫描技术将传统O(n)串行递归转化为O(log n)可并行操作。原始实现深度集成在Mamba项目中，本项目将其提取为独立模块，保持原有的高性能CUDA实现。
 
 **提取封装特性：**
@@ -477,6 +483,8 @@ selective_scan/
 
 - **v0.1.0** (2025-10) - 初始提取版本
   - 从Mamba原始仓库提取Selective Scan核心代码
+    - 源自commit: `d49d7c909b5a9d151b3f4e7e8477e7d20f156860` (2024-08-30)
+    - 对应Mamba v2.2.6版本
   - 重新组织为独立Python包结构
   - 保留原有全部功能：前向/反向传播、多精度、实数/复数支持
   - 添加标准setup.py和__init__.py接口

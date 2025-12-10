@@ -57,8 +57,11 @@ if TORCH_AVAILABLE:
 setup(
     name='selective_scan',
     version='0.1.0',
-    author='mamba team',
-    description='Selective Scan CUDA kernels extracted from Mamba for standalone use',
+    author='biubushy',
+    author_email='',
+    description='Selective Scan CUDA kernels extracted from Mamba (commit d49d7c9, 2024-08-30) for standalone use',
+    long_description='Extracted from Mamba v2.2.6, original implementation by Tri Dao',
+    url='https://github.com/biubushy/selective_scan',
     packages=['selective_scan'],
     package_dir={'selective_scan': '.'},
     ext_modules=ext_modules,
